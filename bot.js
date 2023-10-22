@@ -40,7 +40,7 @@ for (const file of slashFiles){
 
 if(LOAD_SLASH) {
     const rest = new REST({ version: "9" }).setToken(TOKEN)
-    console.log("Deploy slash cmds");
+    console.log("Deploy slash command");
     rest.put(Routes.applicationGuildCommands(APPLICATION_ID, GUILD_ID), {body: commands})
     .then(() => {
         console.log('Success loading');
